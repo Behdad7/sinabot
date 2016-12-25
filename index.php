@@ -16,6 +16,7 @@ $telegram = new Telegram($bot_id);
 */
 // Take text and chat_id from the message
 $text = $telegram->Text();
+$img = curl_file_create('test.png','image/png'); 
 $chat_id = $telegram->ChatID();
 $callback_query = $telegram->Callback_Query();
 $category=array("مشاوره حقوقی","مشاوره کمک آموزشی","کامپیوتر","آشپزی","پزشکی و سلامتی","دام پزشک","مکانیک","برق و الکنترونیک","تاسیسات ساختمانی","مشاوره خانواده","مشاوره دینی","کشاورزی و باغداری");
@@ -208,7 +209,8 @@ if(!is_null($text) && !is_null($chat_id)){
 		$option = array(array($telegram->buildInlineKeyboardButton("🍲 پرداخت(Donate)",$server_output,"","")));
 		$keyb = $telegram->buildInlineKeyBoard($option);
 		
-		$content = array('chat_id' => $server_chat_id, 'reply_markup' => $keyb, 'text' => "ما رو به یک چای دعوت کنید");
+		$content = array('chat_id' => $server_chat_id, 'reply_markup' => $keyb, 'text' => "ما رو به یک چای دعوت کنید.
+		لطفاً بعد از پرداخت گزارش پرداخت را ذخیره و ارسال کنید.");
 		$telegram->sendMessage($content);
 
 	}
@@ -312,7 +314,10 @@ if(!is_null($text) && !is_null($chat_id)){
 		else{
 			
 			$content = array('chat_id' => $server_output, 'text' => $text  );
-			$telegram->sendMessage($content);			
+			$telegram->sendMessage($content);
+			
+			$content = array('chat_id' => $server_output, 'photo' => $img );
+			$telegram->sendPhoto($content);
 			
 		}
 
