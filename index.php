@@ -104,7 +104,7 @@ if(!is_null($text) && !is_null($chat_id)){
 			
 			];
 			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/sinagoo_panel.php");
+			curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/sinagoo_panel.php");
 			curl_setopt($ch, CURLOPT_POST, 1);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 			// receive server response ...
@@ -133,7 +133,7 @@ if(!is_null($text) && !is_null($chat_id)){
 
 			];
 			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/sina_online.php");
+			curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/sina_online.php");
 			curl_setopt($ch, CURLOPT_POST, 1);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 			// receive server response ...
@@ -151,7 +151,7 @@ if(!is_null($text) && !is_null($chat_id)){
 
 			];
 			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/sina_online_time.php");
+			curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/sina_online_time.php");
 			curl_setopt($ch, CURLOPT_POST, 1);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 			// receive server response ...
@@ -168,7 +168,7 @@ if(!is_null($text) && !is_null($chat_id)){
 
 			];
 			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/laghv.php");
+			curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/laghv.php");
 			curl_setopt($ch, CURLOPT_POST, 1);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 			// receive server response ...
@@ -187,7 +187,7 @@ if(!is_null($text) && !is_null($chat_id)){
 
 			];
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/donate_lnk.php");
+		curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/donate_lnk.php");
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 		// receive server response ...
@@ -196,7 +196,7 @@ if(!is_null($text) && !is_null($chat_id)){
 		$server_output = curl_exec ($ch);
 		curl_close ($ch);
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/send_msg.php");
+		curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/send_msg.php");
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 		// receive server response ...
@@ -230,7 +230,7 @@ if(!is_null($text) && !is_null($chat_id)){
 
 		];
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/sandogh_report.php");
+		curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/sandogh_report.php");
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 		// receive server response ...
@@ -251,7 +251,7 @@ if(!is_null($text) && !is_null($chat_id)){
 
 		];
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/shaba.php");
+		curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/shaba.php");
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 		// receive server response ...
@@ -275,7 +275,7 @@ if(!is_null($text) && !is_null($chat_id)){
 			'shabaname' => substr($text,27,strlen($text))
 		];
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/shaba.php");
+		curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/shaba.php");
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 		// receive server response ...
@@ -294,7 +294,7 @@ if(!is_null($text) && !is_null($chat_id)){
 
 		];
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/send_msg.php");
+		curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/send_msg.php");
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 		// receive server response ...
@@ -369,7 +369,7 @@ if(!is_null($text) && !is_null($chat_id)){
 				
 			];
 			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/addsina.php");
+			curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/addsina.php");
 			curl_setopt($ch, CURLOPT_POST, 1);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 			// receive server response ...
@@ -390,7 +390,7 @@ if(!is_null($text) && !is_null($chat_id)){
 
 			];
 			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL,"http://8003f3ad.ngrok.io/sina/sinadb/get_sina.php");
+			curl_setopt($ch, CURLOPT_URL,"http://ibnsina.srv.parperook.ir/get_sina.php");
 			curl_setopt($ch, CURLOPT_POST, 1);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 			// receive server response ...
