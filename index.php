@@ -109,7 +109,7 @@ if( !is_null($chat_id)){/* !is_null($text) && */
 	
 	else if ($text == "📕 راهنمای" || $text =="/help" ) {
 
-		$option = array(array($telegram->buildInlineKeyboardButton(""📕 راهنمای","https://telegram.me/ibnsinahelp","","")));
+		$option = array(array($telegram->buildInlineKeyboardButton("📕 راهنمای","https://telegram.me/ibnsinahelp","","")));
 		$keyb = $telegram->buildInlineKeyBoard($option);
 		
 		$content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "جهت مشاهده فهرست راهنمای(📕)");
