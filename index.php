@@ -37,7 +37,7 @@ if( !is_null($chat_id)){/* !is_null($text) && */
 			$reply = " لطفا اگر توانایی و تخصص دارید به عنوان 🕵 سیناگو میشوم(/rega) در اٍبن سینا ثبت نام کنید. در غیر این صورت  🙋 سوال دارم(/haveq) را انتخاب کنید. ";
 		}
 	        // Create option for the custom keyboard. Array of array string
-	        $option = array( array("🙋 سوال دارم", "🕵 سیناگو میشوم"), array("💻 پنل کاربری", "💻 پنل سیناگو"), array("📕 راهنمای") );
+	        $option = array( array("🙋 سوال دارم", "🕵 سیناگو میشوم"), array("💻 پنل کاربری", "💻 پنل سیناگو"), array("📕 راهنما") );
 	        // Get the keyboard
 		$keyb = $telegram->buildKeyBoard($option, $onetime=true, $resize=true, $selective=true);
 		$content = array('chat_id' => $chat_id,'parse_mode'=>'HTML', 'reply_markup' => $keyb, 'text' => $reply);
@@ -107,12 +107,12 @@ if( !is_null($chat_id)){/* !is_null($text) && */
 		$telegram->sendMessage($content);
 	}	
 	
-	else if ($text == "📕 راهنمای" || $text =="/help" ) {
+	else if ($text == "📕 راهنما" || $text =="/help" ) {
 
-		$option = array(array($telegram->buildInlineKeyboardButton("📕 راهنمای","https://telegram.me/ibnsinahelp","","")));
+		$option = array(array($telegram->buildInlineKeyboardButton("📕 راهنما","https://telegram.me/ibnsinahelp","","")));
 		$keyb = $telegram->buildInlineKeyBoard($option);
 		
-		$content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "جهت مشاهده فهرست راهنمای(📕)");
+		$content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "جهت مشاهده فهرست راهنما(📕)");
 		$telegram->sendMessage($content);
 
 	}	
