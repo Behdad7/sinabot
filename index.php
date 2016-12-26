@@ -15,13 +15,21 @@ $telegram = new Telegram($bot_id);
 *  $chat_id = $result["message"] ["chat"]["id"];
 */
 // Take text and chat_id from the message
+
+$result = $telegram->getData();
+$msgid = $result["message"]["message_id"];
+
 $text = $telegram->Text();
 $img = curl_file_create('test.png','image/png'); 
+
+$file = $telegram->getFile($file_id);
+$telegram->downloadFile($file["file_path"], "./my_downloaded_file_on_local_server.png");
+
 $chat_id = $telegram->ChatID();
 $callback_query = $telegram->Callback_Query();
 $category=array("مشاوره حقوقی","مشاوره کمک آموزشی","کامپیوتر","آشپزی","پزشکی و سلامتی","دام پزشک","مکانیک","برق و الکنترونیک","تاسیسات ساختمانی","مشاوره خانواده","مشاوره دینی","کشاورزی و باغداری");
 // Check if the text is a command
-if(!is_null($text) && !is_null($chat_id)){
+if( !is_null($chat_id)){/* !is_null($text) && */
 	if ($text == "/start" || $text == "🖱 منوی اصلی") {
 		if ($telegram->messageFromGroup()) {
 			$reply = "Chat Group";
@@ -313,11 +321,16 @@ if(!is_null($text) && !is_null($chat_id)){
 		}
 		else{
 			
-			$content = array('chat_id' => $server_output, 'text' => $text  );
-			$telegram->sendMessage($content);
+ /*			$content = array('chat_id' => $server_output, 'text' => $msgid.$text .$server_output );
+			$ismsg=	$telegram->sendMessage($content);
+			
+			
 			
 			$content = array('chat_id' => $server_output, 'photo' => $img );
-			$telegram->sendPhoto($content);
+			$telegram->sendPhoto($content); */
+			$content = array('chat_id' => $server_output,'from_chat_id'=>$chat_id ,'message_id'=> $msgid );
+			$telegram->forwardMessage($content);
+
 			
 		}
 
